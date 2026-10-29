@@ -1,269 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean Scene | Coffee Shop</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Phosphor Icons (for social and feature icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind Custom Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                        cursive: ['Clicker Script', 'cursive'],
-                    },
-                    colors: {
-                        primary: '#F9C06A', // Yellow/Gold from design
-                        dark: '#1E1E1E',
-                        brown: {
-                            900: '#2B1B12', // Footer dark
-                            800: '#4A2B18', // Banner dark
-                            600: '#603809', // Medium brown text
-                        },
-                        beige: {
-                            light: '#FFF9F1', // Card background
-                            dark: '#F3EADC'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom styles for splash effects and image masking */
-        body { background-color: #ffffff; overflow-x: hidden; }
-        
-        .coffee-splash {
-            position: absolute;
-            z-index: -1;
-            opacity: 0.6;
-            pointer-events: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Scene Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="text-gray-800 antialiased font-sans">
+<body>
 
-    <!-- 1. Navigation (Header) -->
-    <header class="absolute w-full top-0 z-50 bg-black/20 backdrop-blur-sm">
-        <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-4xl font-cursive text-white tracking-wide">
-                Bean Scene
-            </a>
-            
-            <!-- Links (Desktop) -->
-            <div class="hidden md:flex space-x-10 items-center">
-                <a href="#" class="text-white hover:text-primary transition-colors text-sm font-medium">Home</a>
-                <a href="#menu" class="text-white hover:text-primary transition-colors text-sm font-medium">Menu</a>
-                <a href="#about" class="text-white hover:text-primary transition-colors text-sm font-medium">About Us</a>
-                <a href="#contact" class="text-white hover:text-primary transition-colors text-sm font-medium">Contact Us</a>
-            </div>
+<header class="hero" id="home">
+  <nav class="nav">
+    <a href="#home" class="logo">Bean Scene</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-auth">
+      <a href="#">Sign In</a>
+      <a href="#" class="btn">SingUp</a>
+    </div>
+  </nav>
+  <div class="hero-content">
+    <p class="hero-kicker">We've got your morning covered with</p>
+    <h1>Coffee</h1>
+    <p class="hero-text">It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.</p>
+    <a href="#menu" class="btn">Order Now</a>
+  </div>
+</header>
 
-            <!-- Auth Buttons -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#" class="text-white hover:text-primary font-medium text-sm transition-colors">Sign In</a>
-                <a href="#" class="bg-primary text-black px-6 py-2 rounded-full font-medium text-sm hover:bg-yellow-500 transition-colors">SignUp</a>
-            </div>
+<section class="discover" id="about">
+  <div class="discover-text">
+    <h2>Discover the best coffee</h2>
+    <p>Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.</p>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+  <div class="discover-img" role="img" aria-label="Cup made of coffee beans"></div>
+</section>
 
-            <!-- Mobile Menu Button (Icon) -->
-            <button class="md:hidden text-white focus:outline-none">
-                <i class="ph ph-list text-3xl"></i>
-            </button>
-        </nav>
-    </header>
+<section class="blend" id="menu">
+  <h2>Enjoy a new blend of coffee style</h2>
+  <p class="sub">Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
+  <div class="cards">
+    <article class="card"><div class="card-img img-cappuccino"></div><h3>Cappuccino</h3><p>Coffee 50% | Milk 50%</p><strong>$8.50</strong><a href="#" class="btn">Order Now</a></article>
+    <article class="card"><div class="card-img img-chai"></div><h3>Chai Latte</h3><p>Coffee 50% | Milk 50%</p><strong>$8.50</strong><a href="#" class="btn">Order Now</a></article>
+    <article class="card"><div class="card-img img-macchiato"></div><h3>Macchiato</h3><p>Coffee 50% | Milk 50%</p><strong>$8.50</strong><a href="#" class="btn">Order Now</a></article>
+    <article class="card"><div class="card-img img-espresso"></div><h3>Expresso</h3><p>Coffee 50% | Milk 50%</p><strong>$8.50</strong><a href="#" class="btn">Order Now</a></article>
+  </div>
+</section>
 
-    <!-- 2. Hero Section -->
-    <section class="relative h-screen min-h-[600px] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1920&auto=format&fit=crop');">
-        <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
-            <div class="max-w-xl">
-                <h2 class="text-white font-serif text-2xl md:text-3xl mb-2">We've got your morning covered with</h2>
-                <!-- Cursive Coffee -->
-                <h1 class="text-primary font-cursive text-8xl md:text-9xl mb-6 -ml-2 leading-none">Coffee</h1>
-                
-                <p class="text-gray-200 text-base md:text-lg mb-8 leading-relaxed max-w-md">
-                    It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.
-                </p>
-                
-                <a href="#menu" class="inline-block bg-primary text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors shadow-lg">
-                    Order Now
-                </a>
-            </div>
-        </div>
-    </section>
+<section class="why">
+  <h2>Why are we different?</h2>
+  <p class="sub">We don't just make your coffee, we make your day!</p>
+  <div class="features">
+    <article class="feature featured"><span class="icon">🌱</span><h3>Supreme Beans</h3><p>Beans that provides great taste</p></article>
+    <article class="feature"><span class="icon">🏅</span><h3>High Quality</h3><p>We provide the highest quality</p></article>
+    <article class="feature"><span class="icon">☕</span><h3>Extraordinary</h3><p>Coffee like you have never tasted</p></article>
+    <article class="feature"><span class="icon">💲</span><h3>Affordable Price</h3><p>Our Coffee prices are easy to afford</p></article>
+  </div>
+  <p class="sub">Great ideas start with great coffee, Lets help you achieve that</p>
+  <h3 class="started">Get started today.</h3>
+  <a href="#" class="btn">Join Us</a>
+</section>
 
-    <!-- 3. Discover Section -->
-    <section id="about" class="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 flex flex-col md:flex-row items-center gap-16">
-        <!-- Left Content -->
-        <div class="flex-1 space-y-6 z-10">
-            <h2 class="text-4xl md:text-5xl font-serif text-brown-900 font-bold">Discover the best coffee</h2>
-            <p class="text-gray-500 leading-relaxed">
-                Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.
-            </p>
-            <a href="#" class="inline-block bg-primary text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors mt-4">
-                Learn More
-            </a>
-        </div>
-        
-        <!-- Right Image -->
-        <div class="flex-1 relative">
-            <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=800&auto=format&fit=crop" alt="Coffee beans shape" class="w-full h-auto rounded-3xl shadow-xl object-cover mix-blend-multiply" style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;">
-        </div>
+<section class="morning">
+  <div>
+    <h2>Get a chance to have an Amazing morning</h2>
+    <p>We are giving you are one time opportunity to experience a better life with coffee.</p>
+    <a href="#" class="btn">Order Now</a>
+  </div>
+  <div class="morning-img" role="img" aria-label="Coffee cup with beans"></div>
+</section>
 
-        <!-- Decorative SVG Splash (Abstract) -->
-        <svg class="coffee-splash top-0 left-0 w-64 h-64 text-brown-800/10 -translate-x-1/2 -translate-y-1/4" fill="currentColor" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.6,-46.7C91.4,-34.3,98,-19.6,97.4,-5.2C96.9,9.2,89.1,23.3,79.1,34.8C69.1,46.3,56.8,55.1,43.4,62.6C30,70.1,15,76.3,0.3,75.7C-14.4,75.2,-28.9,67.9,-41.8,60C-54.7,52,-66.1,43.4,-74.6,31.7C-83.1,20,-88.7,5.2,-87.3,-9.1C-85.9,-23.4,-77.5,-37.2,-66.5,-47.9C-55.5,-58.6,-42,-66.2,-28.6,-73.2C-15.2,-80.2,-1.9,-86.6,12.1,-84.9C26.2,-83.1,40.4,-73.2,44.7,-76.4Z" transform="translate(100 100) scale(1.1)" />
-        </svg>
-    </section>
+<section class="feedback">
+  <h2>Our coffee perfection feedback</h2>
+  <p class="sub">Our customers has amazing things to say about us</p>
+  <div class="testimonial">
+    <button class="arrow" aria-label="Previous">←</button>
+    <blockquote>
+      <span class="quote-mark">“</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.....</p>
+      <h3>Jonny Thomas</h3>
+      <small>Project Manager</small>
+      <div class="avatar" role="img" aria-label="Jonny Thomas"></div>
+    </blockquote>
+    <button class="arrow" aria-label="Next">→</button>
+  </div>
+</section>
 
-    <!-- 4. Menu Section -->
-    <section id="menu" class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div class="text-center mb-16 space-y-4">
-            <h2 class="text-4xl md:text-5xl font-serif text-brown-900 font-bold">Enjoy a new blend of coffee style</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto">Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
-        </div>
+<section class="subscribe">
+  <h2>Subscribe to get the Latest News</h2>
+  <p>Don't miss out on our latest news, updates, tips and special offers</p>
+  <form onsubmit="return false">
+    <input type="email" placeholder="Enter your mail" aria-label="Email" required>
+    <button class="btn" type="submit">Suscribe</button>
+  </form>
+</section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            <!-- Card 1 -->
-            <article class="bg-beige-light rounded-sm overflow-hidden flex flex-col items-center text-center pb-8 shadow-sm hover:shadow-md transition-shadow">
-                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=400&auto=format&fit=crop" alt="Cappuccino" class="w-full h-56 object-cover mb-6">
-                <h3 class="text-2xl font-serif text-brown-900 font-bold mb-1">Cappuccino</h3>
-                <p class="text-gray-500 text-sm mb-2">Coffee 50% | Milk 50%</p>
-                <p class="text-xl font-bold text-brown-900 mb-6">$8.50</p>
-                <button class="bg-primary text-black px-8 py-2.5 rounded-full font-medium hover:bg-yellow-500 transition-colors">Order Now</button>
-            </article>
+<footer id="contact">
+  <div class="foot-brand">
+    <span class="logo">Bean Scene</span>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
+  <div><h4>About</h4><ul><li><a href="#">Menu</a></li><li><a href="#">Features</a></li><li><a href="#">News &amp; Blogs</a></li><li><a href="#">Help &amp; Supports</a></li></ul></div>
+  <div><h4>Company</h4><ul><li><a href="#">How we work</a></li><li><a href="#">Terms of service</a></li><li><a href="#">Pricing</a></li><li><a href="#">FAQ</a></li></ul></div>
+  <div><h4>Contact Us</h4><ul><li>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</li><li>+1 202-918-2132</li><li>beanscene@mail.com</li><li>www.beanscene.com</li></ul></div>
+</footer>
 
-            <!-- Card 2 -->
-            <article class="bg-beige-light rounded-sm overflow-hidden flex flex-col items-center text-center pb-8 shadow-sm hover:shadow-md transition-shadow">
-                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=400&auto=format&fit=crop" alt="Chai Latte" class="w-full h-56 object-cover mb-6">
-                <h3 class="text-2xl font-serif text-brown-900 font-bold mb-1">Chai Latte</h3>
-                <p class="text-gray-500 text-sm mb-2">Coffee 50% | Milk 50%</p>
-                <p class="text-xl font-bold text-brown-900 mb-6">$8.50</p>
-                <button class="bg-primary text-black px-8 py-2.5 rounded-full font-medium hover:bg-yellow-500 transition-colors">Order Now</button>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="bg-beige-light rounded-sm overflow-hidden flex flex-col items-center text-center pb-8 shadow-sm hover:shadow-md transition-shadow">
-                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=400&auto=format&fit=crop" alt="Macchiato" class="w-full h-56 object-cover mb-6">
-                <h3 class="text-2xl font-serif text-brown-900 font-bold mb-1">Macchiato</h3>
-                <p class="text-gray-500 text-sm mb-2">Coffee 50% | Milk 50%</p>
-                <p class="text-xl font-bold text-brown-900 mb-6">$8.50</p>
-                <button class="bg-primary text-black px-8 py-2.5 rounded-full font-medium hover:bg-yellow-500 transition-colors">Order Now</button>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="bg-beige-light rounded-sm overflow-hidden flex flex-col items-center text-center pb-8 shadow-sm hover:shadow-md transition-shadow">
-                <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?q=80&w=400&auto=format&fit=crop" alt="Expresso" class="w-full h-56 object-cover mb-6">
-                <h3 class="text-2xl font-serif text-brown-900 font-bold mb-1">Expresso</h3>
-                <p class="text-gray-500 text-sm mb-2">Coffee 50% | Milk 50%</p>
-                <p class="text-xl font-bold text-brown-900 mb-6">$8.50</p>
-                <button class="bg-primary text-black px-8 py-2.5 rounded-full font-medium hover:bg-yellow-500 transition-colors">Order Now</button>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- 5. Features Section -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-20 relative">
-        <div class="text-center mb-16 space-y-4">
-            <h2 class="text-4xl md:text-5xl font-serif text-brown-900 font-bold">Why are we different?</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto">We don't just make your coffee, we make your day!</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <!-- Feature 1 -->
-            <div class="bg-beige-light border border-orange-100/50 p-10 text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-coffee-bean text-5xl text-brown-900 mb-4"></i>
-                <h3 class="text-xl font-serif text-brown-900 font-bold mb-3">Supreme Beans</h3>
-                <p class="text-gray-500 text-sm">Beans that provides great taste</p>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="bg-beige-light border border-orange-100/50 p-10 text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-medal text-5xl text-brown-900 mb-4"></i>
-                <h3 class="text-xl font-serif text-brown-900 font-bold mb-3">High Quality</h3>
-                <p class="text-gray-500 text-sm">We provide the highest quality</p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="bg-beige-light border border-orange-100/50 p-10 text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-coffee text-5xl text-brown-900 mb-4"></i>
-                <h3 class="text-xl font-serif text-brown-900 font-bold mb-3">Extraordinary</h3>
-                <p class="text-gray-500 text-sm">Coffee like you have never tasted</p>
-            </div>
-
-            <!-- Feature 4 -->
-            <div class="bg-beige-light border border-orange-100/50 p-10 text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-thumbs-up text-5xl text-brown-900 mb-4"></i>
-                <h3 class="text-xl font-serif text-brown-900 font-bold mb-3">Affordable Price</h3>
-                <p class="text-gray-500 text-sm">Our Coffee prices are easy to afford</p>
-            </div>
-        </div>
-
-        <div class="text-center space-y-4">
-            <p class="text-gray-500">Great ideas start with great coffee, Lets help you achieve that</p>
-            <h3 class="text-3xl font-serif text-brown-900 font-bold mb-6">Get started today.</h3>
-            <a href="#" class="inline-block bg-primary text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors mt-2">
-                Join Us
-            </a>
-        </div>
-    </section>
-
-    <!-- 6. Promotional Banner -->
-    <section class="w-full relative py-24 bg-brown-800 flex items-center overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between gap-12">
-            <div class="flex-1 space-y-6 text-white max-w-lg">
-                <h2 class="text-4xl md:text-5xl font-serif font-bold leading-tight">Get a chance to have an <br> Amazing morning</h2>
-                <p class="text-gray-300">We are giving you are one time opportunity to experience a better life with coffee.</p>
-                <a href="#menu" class="inline-block bg-primary text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-colors mt-4">
-                    Order Now
-                </a>
-            </div>
-            <div class="flex-1 flex justify-center md:justify-end">
-                <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?q=80&w=600&auto=format&fit=crop" alt="Coffee Cup" class="w-72 h-auto object-cover rounded-full border-8 border-brown-900/30 shadow-2xl rotate-3">
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Testimonial Section -->
-    <section class="py-24 bg-white relative">
-        <div class="text-center mb-16 space-y-4">
-            <h2 class="text-4xl md:text-5xl font-serif text-brown-900 font-bold">Our coffee perfection feedback</h2>
-            <p class="text-gray-500">Our customers has amazing things to say about us</p>
-        </div>
-
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative">
-            <!-- Nav Arrows -->
-            <button class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 w-14 h-14 bg-primary rounded-xl items-center justify-center hover:bg-yellow-500 transition-colors text-brown-900 shadow-md z-10">
-                <i class="ph ph-arrow-left text-2xl font-bold"></i>
-            </button>
-            <button class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 w-14 h-14 bg-primary rounded-xl items-center justify-center hover:bg-yellow-500 transition-colors text-brown-900 shadow-md z-10">
-                <i class="ph ph-arrow-right text-2xl font-bold"></i>
-            </button>
-
-            <!-- Testimonial Card -->
-            <div class="bg-beige-light p-10 md:p-16 text-center relative border border-orange-50/50">
-                <!-- Huge Quote Mark -->
-                <span class="absolute top-4 left-6 text-8xl font-serif text-brown-900 opacity-20 leading-none">“</span>
-                
-                <p class="text-gray-600 leading-loose mb-10 relative z-10">
+</body>
+</html>
